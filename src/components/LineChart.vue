@@ -17,7 +17,7 @@ import type { ChartOptions } from 'chart.js'
 import { Line } from 'vue-chartjs'
 import 'chartjs-adapter-date-fns'
 import { ru } from 'date-fns/locale'
-import { oklchToRgb, hexToRgb } from '@/lib/utils.ts'
+import { oklchToRgb, hexToRgb } from '@/lib/utils'
 
 ChartJS.register(
 	Title,

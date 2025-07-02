@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+
 # Environment files
 .env
 .env.*

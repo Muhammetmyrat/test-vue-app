@@ -17,9 +17,9 @@ interface Filters<T> {
 
 export function useFilters<
 	T extends {
-		warehouse_name: string
-		region_name: string
-		country_name: string
+		warehouse_name?: string
+		region_name?: string
+		country_name?: string
 	}
 >(initialData: Ref<T[]>): Filters<T> {
 	const selectedWarehouse = ref<string>('all')
@@ -30,9 +30,9 @@ export function useFilters<
 		const data = initialData.value
 
 		return {
-			warehouses: Array.from(new Set(data.map(item => item.warehouse_name))).filter(Boolean),
-			regions: Array.from(new Set(data.map(item => item.region_name))).filter(Boolean),
-			countries: Array.from(new Set(data.map(item => item.country_name))).filter(Boolean)
+			warehouses: [...new Set(data.map(i => i.warehouse_name).filter(Boolean))] as string[],
+			regions: [...new Set(data.map(i => i.region_name).filter(Boolean))] as string[],
+			countries: [...new Set(data.map(i => i.country_name).filter(Boolean))] as string[]
 		}
 	})
 

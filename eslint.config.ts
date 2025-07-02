@@ -10,7 +10,7 @@ const { browser, node } = globals
 
 export default [
 	{
-		ignores: ['vite.config.ts', 'dist', 'node_modules'],
+		ignores: ['vite.config.ts', 'eslint.config.ts', 'dist', 'node_modules'],
 		files: ['**/*.ts', '**/*.vue'],
 		languageOptions: {
 			parser: vueParser,
@@ -18,7 +18,7 @@ export default [
 				parser: tsParser,
 				ecmaVersion: 'latest',
 				sourceType: 'module',
-				project: './tsconfig.eslint.json',
+				project: './tsconfig.json',
 				extraFileExtensions: ['.vue'],
 				tsconfigRootDir: process.cwd()
 			},
@@ -60,7 +60,6 @@ export default [
 					vueSingleFileComponentIndentation: true
 				}
 			],
-			'import/no-unresolved': 'off',
 			'@typescript-eslint/no-explicit-any': 'off',
 			'@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
 			'@typescript-eslint/explicit-function-return-type': 'off',

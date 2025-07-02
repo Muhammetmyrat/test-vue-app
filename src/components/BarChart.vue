@@ -12,7 +12,7 @@ import {
 	LinearScale
 } from 'chart.js'
 import type { ChartOptions, TooltipItem } from 'chart.js'
-import { oklchToRgb, hexToRgb } from '@/lib/utils.ts'
+import { oklchToRgb, hexToRgb } from '@/lib/utils'
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 

@@ -1,7 +1,7 @@
 import type { Column } from '@/components/data-table/type'
 import type { StockItem } from '@/api/types/stock'
 
-export const columns: Column<StockItem>[] = [
+export const columns = [
 	{
 		accessorKey: 'date',
 		header: 'Дата',
@@ -100,4 +100,4 @@ export const columns: Column<StockItem>[] = [
 		header: 'Скидка',
 		cell: (row: StockItem) => `${parseFloat(row.discount.toString()).toLocaleString('ru-RU')}%`
 	}
-] as Column<StockItem>[]
+] as Column[]

@@ -1,7 +1,7 @@
 import type { Column } from '@/components/data-table/type'
 import type { OrderItem } from '@/api/types/order'
 
-export const columns: Column<OrderItem>[] = [
+export const columns = [
 	{
 		accessorKey: 'income_id',
 		header: 'ID'
@@ -60,4 +60,4 @@ export const columns: Column<OrderItem>[] = [
 		header: 'Статус',
 		cell: (row: OrderItem) => (row.is_cancel ? 'Отменен' : row.cancel_dt ? 'Закрыт' : 'Активен')
 	}
-] as Column<OrderItem>[]
+] as Column[]

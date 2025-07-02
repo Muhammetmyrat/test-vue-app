@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
-function reactiveOmit<T extends object, K extends keyof T>(obj: T, key: K): Omit<T, K> {
-	const { [key]: _, ...rest } = obj
-	return rest as Omit<T, K>
-}
+import { reactiveOmit } from '@vueuse/core'
 import { ChevronDown } from 'lucide-vue-next'
 import { SelectScrollDownButton, type SelectScrollDownButtonProps, useForwardProps } from 'reka-ui'
 import { cn } from '@/lib/utils'
@@ -16,13 +13,13 @@ const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
-	<SelectScrollDownButton
-		data-slot="select-scroll-down-button"
-		v-bind="forwardedProps"
-		:class="cn('flex cursor-default items-center justify-center py-1', props.class)"
-	>
-		<slot>
-			<ChevronDown class="size-4" />
-		</slot>
-	</SelectScrollDownButton>
+  <SelectScrollDownButton
+    data-slot="select-scroll-down-button"
+    v-bind="forwardedProps"
+    :class="cn('flex cursor-default items-center justify-center py-1', props.class)"
+  >
+    <slot>
+      <ChevronDown class="size-4" />
+    </slot>
+  </SelectScrollDownButton>
 </template>

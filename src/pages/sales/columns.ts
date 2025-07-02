@@ -1,7 +1,7 @@
 import type { Column } from '@/components/data-table/type'
 import type { SaleItem } from '@/api/types/sale'
 
-export const columns: Column<SaleItem>[] = [
+export const columns = [
 	{
 		accessorKey: 'g_number',
 		header: 'Номер заказа',
@@ -131,4 +131,4 @@ export const columns: Column<SaleItem>[] = [
 		header: 'Сторно',
 		cell: (row: SaleItem) => (row.is_storno === null ? '—' : row.is_storno ? 'Да' : 'Нет')
 	}
-] as Column<SaleItem>[]
+] as Column[]

@@ -1,7 +1,7 @@
 import type { Column } from '@/components/data-table/type'
 import type { IncomeItem } from '@/api/types/income'
 
-export const columns: Column<IncomeItem>[] = [
+export const columns = [
 	{
 		accessorKey: 'income_id',
 		header: 'ID'
@@ -55,4 +55,4 @@ export const columns: Column<IncomeItem>[] = [
 		header: 'Статус',
 		cell: (row: IncomeItem) => (row.date_close ? 'Закрыт' : 'Открыт')
 	}
-] as Column<IncomeItem>[]
+] as Column[]
