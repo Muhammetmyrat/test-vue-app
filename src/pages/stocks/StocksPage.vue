@@ -52,7 +52,7 @@ const chartData = useChart<StockItem>({
 
 		<BarChart
 			:data="chartData.barChartData"
-			title="Изменение поставок по неделям"
+			title="Изменение акции по неделям"
 			show-tooltips
 			line-color="--color-chart-5"
 		/>

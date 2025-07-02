@@ -97,7 +97,7 @@ const chartOptions = computed<ChartOptions<'bar'>>(() => ({
 			beginAtZero: true,
 			title: {
 				display: true,
-				text: 'Количество поставок',
+				text: 'Количество',
 				padding: 10
 			},
 			ticks: {
