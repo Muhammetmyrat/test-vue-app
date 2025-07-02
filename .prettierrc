@@ -1,0 +1,14 @@
+{
+	"useTabs": true,
+	"tabWidth": 1,
+	"semi": false,
+	"singleQuote": true,
+	"trailingComma": "none",
+	"arrowParens": "avoid",
+	"printWidth": 100,
+	"vueIndentScriptAndStyle": false,
+	"htmlWhitespaceSensitivity": "ignore",
+	"endOfLine": "auto",
+	"vueStrictStyle": true,
+	"vueSingleFileComponentIndentation": true
+}

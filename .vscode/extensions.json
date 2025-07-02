@@ -1,0 +1,12 @@
+{
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"rvest.vs-code-prettier-eslint",
+		"stylelint.vscode-stylelint",
+		"ms-vscode.vscode-typescript-next",
+		"eamodio.gitlens",
+		"editorconfig.editorconfig",
+		"christian-kohler.path-intellisense"
+	]
+}

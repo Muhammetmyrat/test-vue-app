@@ -1,0 +1,44 @@
+@use 'sass:math';
+@use 'mixins' as *;
+
+// НАСТРОЙКИ =========================================================================================================================
+// Минимальная ширина страницы
+$minWidth: 320;
+
+// Ширина полотна (макета)
+$maxWidth: 1920;
+// Ширина ограничиваюшего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1440;
+// обший отступ у контейнера
+// (30 = по 15px слева и справа, 0 = нет отступа)
+$containerPadding: 32;
+
+// Ширина страбативания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк - поинты
+$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$laptop: em(1279.98);
+$table: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(768.98); // Телефоны L
+$mobileSmall: em(479.98); // Телефоны S
+
+$invalid-animation-name: invalid;
+
+@keyframes #{$invalid-animation-name} {
+	0% {
+		transform: translateX(0px);
+	}
+	25% {
+		transform: translateX(5px);
+	}
+	50% {
+		transform: translateX(0px);
+	}
+	75% {
+		transform: translateX(-5px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}

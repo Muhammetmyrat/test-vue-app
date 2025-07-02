@@ -1,0 +1,58 @@
+@use 'sass:math';
+@use './abstracts/mixins' as *;
+@use './abstracts/global' as *;
+// @use './base/null' as *;
+// @use './base/variables' as *;
+
+// Шрифт по умолчанию ================================================================================================================
+$fontSize: rem(14); // где 14(px) - размер шрифта по умолчанию из макета
+$fontFamily: 'Inter';
+
+body {
+	line-height: 1;
+	font-size: $fontSize;
+	font-family: $fontFamily;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	scroll-snap-type: y mandatory;
+
+	&._lock {
+		overflow: hidden;
+		-ms-touch-action: none;
+		touch-action: none;
+		top: 0px;
+	}
+
+	&::-moz-selection {
+		color: var(--background);
+		background-color: var(--primary);
+	}
+
+	&::selection {
+		color: var(--background);
+		background-color: var(--primary);
+	}
+}
+
+input,
+button,
+textarea {
+	font-family: $fontFamily;
+}
+
+[class*='__container'] {
+	@if ($maxWidthContainer > 0) {
+		max-width: rem($maxWidthContainer);
+		box-sizing: content-box;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@if ($containerPadding > 0) {
+		padding-left: rem(math.div($containerPadding, 2));
+		padding-right: rem(math.div($containerPadding, 2));
+	}
+}

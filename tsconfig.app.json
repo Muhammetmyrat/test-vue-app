@@ -1,0 +1,24 @@
+{
+	"extends": "@vue/tsconfig/tsconfig.dom.json",
+	"compilerOptions": {
+		"tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+
+		/* Linting */
+		"strict": true,
+		"noEmit": true,
+		"allowSyntheticDefaultImports": true,
+		"erasableSyntaxOnly": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedSideEffectImports": true,
+		"noImplicitAny": false,
+		"preserveSymlinks": true
+	},
+	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+	"baseUrl": ".",
+	"paths": {
+		"@/*": ["./src/*"],
+		"~/*": ["./src/*"]
+	}
+}
